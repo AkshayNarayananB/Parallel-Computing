@@ -1,0 +1,24 @@
+Task,Schedule,Threads,Output_Value,Total_Time_s,Fastest_Thread_s,Slowest_Thread_s,Load_Imbalance_s
+Task 1: Vector Sum,N/A,1,4999999950000000,0.017132,N/A,N/A,N/A
+Task 1: Vector Sum,N/A,8,4999999950000000,0.010564,N/A,N/A,N/A
+Task 1: Vector Sum,N/A,16,4999999950000000,0.010713,N/A,N/A,N/A
+Task 1: Vector Sum,N/A,32,4999999950000000,0.010874,N/A,N/A,N/A
+Task 1: Vector Sum,N/A,64,4999999950000000,0.012528,N/A,N/A,N/A
+Task 2: Prime Counting,Dynamic,1,1270607,2.668093,N/A,N/A,N/A
+Task 2: Prime Counting,Dynamic,8,1270607,0.514480,0.514197,0.514203,0.000006
+Task 2: Prime Counting,Dynamic,16,1270607,0.608866,0.608233,0.608238,0.000004
+Task 2: Prime Counting,Dynamic,32,1270607,0.630208,0.629114,0.629119,0.000005
+Task 2: Prime Counting,Dynamic,64,1270607,0.603324,0.601213,0.601220,0.000007
+Task 3: Game of Life,N/A,1,N/A,40.194286,N/A,N/A,N/A
+Task 3: Game of Life,N/A,8,N/A,5.468434,N/A,N/A,N/A
+Task 3: Game of Life,N/A,16,N/A,3.111461,N/A,N/A,N/A
+Task 3: Game of Life,N/A,32,N/A,1.675388,N/A,N/A,N/A
+Task 3: Game of Life,N/A,64,N/A,1.273879,N/A,N/A,N/A
+Task 2: Prime Counting,Guided,1,1270607,2.637616,N/A,N/A,N/A
+Task 2: Prime Counting,Guided,8,1270607,0.356556,0.355844,0.355850,0.000005
+Task 2: Prime Counting,Guided,16,1270607,0.192240,0.191666,0.191672,0.000005
+Task 2: Prime Counting,Guided,32,1270607,0.096987,0.095897,0.095901,0.000004
+Task 2: Prime Counting,Guided,64,1270607,0.050245,0.048057,0.048065,0.000008
+Task 2: Showdown,Static,64,1270607,0.070298,0.068135,0.068222,0.000086
+Task 2: Showdown,Dynamic (1000),64,1270607,0.050185,0.048145,0.048153,0.000008
+Task 2: Showdown,Guided,64,1270607,0.050127,0.047995,0.048001,0.000006

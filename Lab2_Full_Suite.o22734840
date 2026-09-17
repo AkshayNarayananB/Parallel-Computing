@@ -1,0 +1,106 @@
+========== TASK 1: VECTOR SUM ==========
+--- Threads: 1 ---
+Sum: 4999999950000000
+Time: 0.017132 seconds
+--- Threads: 8 ---
+Sum: 4999999950000000
+Time: 0.010564 seconds
+--- Threads: 16 ---
+Sum: 4999999950000000
+Time: 0.010713 seconds
+--- Threads: 32 ---
+Sum: 4999999950000000
+Time: 0.010874 seconds
+--- Threads: 64 ---
+Sum: 4999999950000000
+Time: 0.012528 seconds
+
+========== TASK 2: PRIME COUNTING (Dynamic) ==========
+--- Threads: 1 ---
+Primes found: 1270607
+Total Execution Time: 2.668093 seconds
+--- Threads: 8 ---
+Primes found: 1270607
+Total Execution Time: 0.514480 seconds
+Fastest thread time: 0.514197 s
+Slowest thread time: 0.514203 s
+Load Imbalance (Idle Time): 0.000006 seconds
+--- Threads: 16 ---
+Primes found: 1270607
+Total Execution Time: 0.608866 seconds
+Fastest thread time: 0.608233 s
+Slowest thread time: 0.608238 s
+Load Imbalance (Idle Time): 0.000004 seconds
+--- Threads: 32 ---
+Primes found: 1270607
+Total Execution Time: 0.630208 seconds
+Fastest thread time: 0.629114 s
+Slowest thread time: 0.629119 s
+Load Imbalance (Idle Time): 0.000005 seconds
+--- Threads: 64 ---
+Primes found: 1270607
+Total Execution Time: 0.603324 seconds
+Fastest thread time: 0.601213 s
+Slowest thread time: 0.601220 s
+Load Imbalance (Idle Time): 0.000007 seconds
+
+========== TASK 3: GAME OF LIFE ==========
+--- Threads: 1 ---
+Simulation finished in 40.194286 seconds
+--- Threads: 8 ---
+Simulation finished in 5.468434 seconds
+--- Threads: 16 ---
+Simulation finished in 3.111461 seconds
+--- Threads: 32 ---
+Simulation finished in 1.675388 seconds
+--- Threads: 64 ---
+Simulation finished in 1.273879 seconds
+
+========== TASK 2: SCALING (Guided Schedule) ==========
+--- Threads: 1 ---
+Primes found: 1270607
+Total Execution Time: 2.637616 seconds
+--- Threads: 8 ---
+Primes found: 1270607
+Total Execution Time: 0.356556 seconds
+Fastest thread time: 0.355844 s
+Slowest thread time: 0.355850 s
+Load Imbalance (Idle Time): 0.000005 seconds
+--- Threads: 16 ---
+Primes found: 1270607
+Total Execution Time: 0.192240 seconds
+Fastest thread time: 0.191666 s
+Slowest thread time: 0.191672 s
+Load Imbalance (Idle Time): 0.000005 seconds
+--- Threads: 32 ---
+Primes found: 1270607
+Total Execution Time: 0.096987 seconds
+Fastest thread time: 0.095897 s
+Slowest thread time: 0.095901 s
+Load Imbalance (Idle Time): 0.000004 seconds
+--- Threads: 64 ---
+Primes found: 1270607
+Total Execution Time: 0.050245 seconds
+Fastest thread time: 0.048057 s
+Slowest thread time: 0.048065 s
+Load Imbalance (Idle Time): 0.000008 seconds
+
+========== TASK 2: LOAD BALANCING SHOWDOWN (64 Threads) ==========
+--- 1. STATIC (Default Chunking) ---
+Primes found: 1270607
+Total Execution Time: 0.070298 seconds
+Fastest thread time: 0.068135 s
+Slowest thread time: 0.068222 s
+Load Imbalance (Idle Time): 0.000086 seconds
+--- 2. DYNAMIC (Chunk size 1000) ---
+Primes found: 1270607
+Total Execution Time: 0.050185 seconds
+Fastest thread time: 0.048145 s
+Slowest thread time: 0.048153 s
+Load Imbalance (Idle Time): 0.000008 seconds
+--- 3. GUIDED ---
+Primes found: 1270607
+Total Execution Time: 0.050127 seconds
+Fastest thread time: 0.047995 s
+Slowest thread time: 0.048001 s
+Load Imbalance (Idle Time): 0.000006 seconds

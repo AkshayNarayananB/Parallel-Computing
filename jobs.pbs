@@ -1,0 +1,52 @@
+#!/bin/bash
+#PBS -N Lab2_Full_Suite
+#PBS -q normal
+#PBS -P personal
+#PBS -l select=1:ncpus=64:mem=20gb
+#PBS -l walltime=00:10:00
+#PBS -j oe
+
+# Change to the directory where the job was submitted
+cd $PBS_O_WORKDIR
+
+module swap PrgEnv-cray PrgEnv-gnu
+
+# Compile the programs
+gcc -fopenmp -O3 task1.c -o task1
+gcc -fopenmp -O3 task2.c -o task2
+gcc -fopenmp -O3 task3.c -o task3
+
+echo "========== TASK 1: VECTOR SUM =========="
+for t in 1 8 16 32 64; do
+    echo "--- Threads: $t ---"
+    OMP_NUM_THREADS=$t ./task1
+done
+
+echo -e "\n========== TASK 2: PRIME COUNTING (Dynamic) =========="
+for t in 1 8 16 32 64; do
+    echo "--- Threads: $t ---"
+    OMP_NUM_THREADS=$t OMP_SCHEDULE="dynamic" ./task2
+done
+
+echo -e "\n========== TASK 3: GAME OF LIFE =========="
+for t in 1 8 16 32 64; do
+    echo "--- Threads: $t ---"
+    OMP_NUM_THREADS=$t ./task3
+done
+
+
+echo -e "\n========== TASK 2: SCALING (Guided Schedule) =========="
+for t in 1 8 16 32 64; do
+    echo "--- Threads: $t ---"
+    OMP_NUM_THREADS=$t OMP_SCHEDULE="guided" ./task2
+done
+
+echo -e "\n========== TASK 2: LOAD BALANCING SHOWDOWN (64 Threads) =========="
+echo "--- 1. STATIC (Default Chunking) ---"
+OMP_NUM_THREADS=64 OMP_SCHEDULE="static" ./task2
+
+echo "--- 2. DYNAMIC (Chunk size 1000) ---"
+OMP_NUM_THREADS=64 OMP_SCHEDULE="dynamic,1000" ./task2
+
+echo "--- 3. GUIDED ---"
+OMP_NUM_THREADS=64 OMP_SCHEDULE="guided" ./task2
