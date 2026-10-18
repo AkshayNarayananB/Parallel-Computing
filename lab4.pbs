@@ -1,0 +1,56 @@
+#!/bin/bash
+#PBS -N SC4050_Lab4
+#PBS -q normal
+#PBS -l select=2:ncpus=12:mpiprocs=12:mem=8gb
+#PBS -l walltime=00:10:00
+#PBS -j oe
+
+cd $PBS_O_WORKDIR
+module load openmpi
+
+# ==========================================
+# 1. COMPILE ALL FILES
+# ==========================================
+mpicc -o hostname_check hostname_check.c
+mpicc -o pingpong pingpong_skeleton.c
+mpicc -o collector collector_skeleton.c
+mpicc -o overlap overlap_skeleton.c -lm
+mpicc -o allreduce allreduce_skeleton.c -lm
+
+# ==========================================
+# 2. RUN SANITY CHECK
+# ==========================================
+echo "--- SANITY CHECK ---"
+mpirun --mca btl ^openib -np 2 --map-by ppr:1:node ./hostname_check
+
+# ==========================================
+# 3. RUN TASK 1
+# ==========================================
+echo -e "\n--- TASK 1: PING-PONG ---"
+mpirun --mca btl ^openib -np 2 --map-by ppr:1:node ./pingpong
+
+# ==========================================
+# 4. RUN TASK 2
+# ==========================================
+echo -e "\n--- TASK 2: COLLECTOR (Run 1) ---"
+mpirun --mca btl ^openib --oversubscribe -np 4 ./collector
+echo -e "\n--- TASK 2: COLLECTOR (Run 2) ---"
+mpirun --mca btl ^openib --oversubscribe -np 4 ./collector
+
+# ==========================================
+# 5. RUN TASK 3
+# ==========================================
+echo -e "\n--- TASK 3: OVERLAP ---"
+mpirun --mca btl ^openib --oversubscribe -np 4 ./overlap
+
+# ==========================================
+# 6. RUN TASK 4
+# ==========================================
+echo -e "\n--- TASK 4: ALL-REDUCE (4 ranks) ---"
+mpirun --mca btl ^openib --oversubscribe -np 4 ./allreduce
+
+echo -e "\n--- TASK 4: ALL-REDUCE (5 ranks) ---"
+mpirun --mca btl ^openib --oversubscribe -np 5 ./allreduce
+
+echo -e "\n--- TASK 4: ALL-REDUCE (9 ranks) ---"
+mpirun --mca btl ^openib --oversubscribe -np 9 ./allreduce

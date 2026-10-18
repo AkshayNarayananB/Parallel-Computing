@@ -1,0 +1,137 @@
+--- SANITY CHECK ---
+[1792311287.878668] [x1001c4s2b0n0:936294:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311287.884910] [x1001c4s2b0n0:936294:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311289.022196] [x1002c6s1b1n0:2231448:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311289.027642] [x1002c6s1b1n0:2231448:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+Rank 0 is running on node: x1001c4s2b0n0
+Rank 1 is running on node: x1002c6s1b1n0
+
+--- TASK 1: PING-PONG ---
+[1792311292.928835] [x1002c6s1b1n0:2231594:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311292.934317] [x1002c6s1b1n0:2231594:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311293.017599] [x1001c4s2b0n0:936328:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311293.023727] [x1001c4s2b0n0:936328:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+n =        8 bytes   one-way time =    6.526 us
+n =       64 bytes   one-way time =    2.925 us
+n =      512 bytes   one-way time =    3.811 us
+n =     4096 bytes   one-way time =    5.335 us
+n =    32768 bytes   one-way time =   10.256 us
+n =   262144 bytes   one-way time =   33.338 us
+n =  1048576 bytes   one-way time =   97.464 us
+Alpha (latency): 6.526 us
+Beta: 0.000087 us/byte
+Bandwidth: 11.531 GB/s
+Crossover n*: 75243 bytes
+
+--- TASK 2: COLLECTOR (Run 1) ---
+[1792311296.677765] [x1001c4s2b0n0:936509:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311296.684333] [x1001c4s2b0n0:936509:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311296.686079] [x1001c4s2b0n0:936512:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311296.690887] [x1001c4s2b0n0:936511:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311296.692788] [x1001c4s2b0n0:936512:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311296.698045] [x1001c4s2b0n0:936511:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311296.700142] [x1001c4s2b0n0:936510:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311296.706123] [x1001c4s2b0n0:936510:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+Collector: received 1 from rank 1 (tag 1)
+Collector: received 9 from rank 3 (tag 3)
+Collector: received 4 from rank 2 (tag 2)
+COLLECTOR: PASS
+
+--- TASK 2: COLLECTOR (Run 2) ---
+[1792311300.842037] [x1001c4s2b0n0:936632:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311300.848996] [x1001c4s2b0n0:936632:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311300.861191] [x1001c4s2b0n0:936631:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311300.868167] [x1001c4s2b0n0:936631:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311300.872665] [x1001c4s2b0n0:936633:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311300.873359] [x1001c4s2b0n0:936634:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311300.884128] [x1001c4s2b0n0:936633:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311300.884136] [x1001c4s2b0n0:936634:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+Collector: received 4 from rank 2 (tag 2)
+Collector: received 1 from rank 1 (tag 1)
+Collector: received 9 from rank 3 (tag 3)
+COLLECTOR: PASS
+
+--- TASK 3: OVERLAP ---
+[1792311304.896313] [x1001c4s2b0n0:936762:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311304.899442] [x1001c4s2b0n0:936763:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311304.905618] [x1001c4s2b0n0:936762:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311304.908323] [x1001c4s2b0n0:936763:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311304.923401] [x1001c4s2b0n0:936765:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311304.925440] [x1001c4s2b0n0:936764:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311304.934323] [x1001c4s2b0n0:936765:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311304.935982] [x1001c4s2b0n0:936764:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+Sequential (no overlap): 30.66 ms/trial
+Overlapped:              7.93 ms/trial
+Savings: 22.72 ms/trial (74.1%)
+[1792311305.660253] [x1001c4s2b0n0:936764:0]           ib_md.c:282  UCX  ERROR ibv_reg_mr(address=0x14cfb4347010, length=16000000, access=0xf) failed: Bad address
+[1792311305.660275] [x1001c4s2b0n0:936764:0]          ucp_mm.c:76   UCX  ERROR failed to register address 0x14cfb4347010 (host) length 16000000 on md[4]=mlx5_0: Input/output error (md supports: host)
+[1792311305.660263] [x1001c4s2b0n0:936762:0]           ib_md.c:282  UCX  ERROR ibv_reg_mr(address=0x1490ba17a010, length=16000000, access=0xf) failed: Bad address
+[1792311305.660278] [x1001c4s2b0n0:936762:0]          ucp_mm.c:76   UCX  ERROR failed to register address 0x1490ba17a010 (host) length 16000000 on md[4]=mlx5_0: Input/output error (md supports: host)
+[1792311305.660826] [x1001c4s2b0n0:936765:0]           ib_md.c:282  UCX  ERROR ibv_reg_mr(address=0x147f00b79010, length=16000000, access=0xf) failed: Bad address
+[1792311305.660841] [x1001c4s2b0n0:936765:0]          ucp_mm.c:76   UCX  ERROR failed to register address 0x147f00b79010 (host) length 16000000 on md[4]=mlx5_0: Input/output error (md supports: host)
+[1792311305.660790] [x1001c4s2b0n0:936763:0]           ib_md.c:282  UCX  ERROR ibv_reg_mr(address=0x15030dabc010, length=16000000, access=0xf) failed: Bad address
+[1792311305.660804] [x1001c4s2b0n0:936763:0]          ucp_mm.c:76   UCX  ERROR failed to register address 0x15030dabc010 (host) length 16000000 on md[4]=mlx5_0: Input/output error (md supports: host)
+[1792311305.721673] [x1001c4s2b0n0:936763:0]           ib_md.c:1378 UCX  WARN  ibv_dealloc_pd() failed: Device or resource busy
+[1792311305.721864] [x1001c4s2b0n0:936762:0]           ib_md.c:1378 UCX  WARN  ibv_dealloc_pd() failed: Device or resource busy
+[1792311305.722235] [x1001c4s2b0n0:936764:0]           ib_md.c:1378 UCX  WARN  ibv_dealloc_pd() failed: Device or resource busy
+[1792311305.722569] [x1001c4s2b0n0:936765:0]           ib_md.c:1378 UCX  WARN  ibv_dealloc_pd() failed: Device or resource busy
+
+--- TASK 4: ALL-REDUCE (4 ranks) ---
+[1792311309.067572] [x1001c4s2b0n0:936920:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311309.073844] [x1001c4s2b0n0:936920:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311309.074376] [x1001c4s2b0n0:936919:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311309.080974] [x1001c4s2b0n0:936919:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311309.101647] [x1001c4s2b0n0:936917:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311309.108344] [x1001c4s2b0n0:936917:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311309.117344] [x1001c4s2b0n0:936918:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311309.123366] [x1001c4s2b0n0:936918:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+Rank 3: local=4.0, running_total=10.0, expected=10.0 -> PASS
+Rank 2: local=3.0, running_total=10.0, expected=10.0 -> PASS
+Rank 0: local=1.0, running_total=10.0, expected=10.0 -> PASS
+Rank 1: local=2.0, running_total=10.0, expected=10.0 -> PASS
+
+--- TASK 4: ALL-REDUCE (5 ranks) ---
+[1792311312.766171] [x1001c4s2b0n0:937035:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311312.768541] [x1001c4s2b0n0:937036:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311312.772509] [x1001c4s2b0n0:937039:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311312.777989] [x1001c4s2b0n0:937035:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311312.781850] [x1001c4s2b0n0:937036:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311312.784590] [x1001c4s2b0n0:937039:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311312.801321] [x1001c4s2b0n0:937038:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311312.807381] [x1001c4s2b0n0:937038:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311312.817870] [x1001c4s2b0n0:937037:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311312.823841] [x1001c4s2b0n0:937037:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+Rank 1: local=2.0, running_total=15.0, expected=15.0 -> PASS
+Rank 3: local=4.0, running_total=15.0, expected=15.0 -> PASS
+Rank 4: local=5.0, running_total=15.0, expected=15.0 -> PASS
+Rank 0: local=1.0, running_total=15.0, expected=15.0 -> PASS
+Rank 2: local=3.0, running_total=15.0, expected=15.0 -> PASS
+
+--- TASK 4: ALL-REDUCE (9 ranks) ---
+[1792311316.517460] [x1001c4s2b0n0:937184:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.523818] [x1001c4s2b0n0:937184:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.526601] [x1001c4s2b0n0:937182:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.532775] [x1001c4s2b0n0:937182:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.533994] [x1001c4s2b0n0:937185:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.534338] [x1001c4s2b0n0:937183:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.543382] [x1001c4s2b0n0:937187:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.548442] [x1001c4s2b0n0:937183:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.548485] [x1001c4s2b0n0:937185:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.553027] [x1001c4s2b0n0:937187:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.553499] [x1001c4s2b0n0:937188:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.554443] [x1001c4s2b0n0:937189:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.564573] [x1001c4s2b0n0:937186:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.564874] [x1001c4s2b0n0:937188:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.566793] [x1001c4s2b0n0:937189:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.572142] [x1001c4s2b0n0:937186:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.575122] [x1001c4s2b0n0:937190:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+[1792311316.581306] [x1001c4s2b0n0:937190:0]     gdr_copy_md.c:272  UCX  WARN  could not open gdr copy, built for v2.3 but loaded v2.5
+Rank 2: local=3.0, running_total=45.0, expected=45.0 -> PASS
+Rank 1: local=2.0, running_total=45.0, expected=45.0 -> PASS
+Rank 0: local=1.0, running_total=45.0, expected=45.0 -> PASS
+Rank 6: local=7.0, running_total=45.0, expected=45.0 -> PASS
+Rank 3: local=4.0, running_total=45.0, expected=45.0 -> PASS
+Rank 5: local=6.0, running_total=45.0, expected=45.0 -> PASS
+Rank 7: local=8.0, running_total=45.0, expected=45.0 -> PASS
+Rank 4: local=5.0, running_total=45.0, expected=45.0 -> PASS
+Rank 8: local=9.0, running_total=45.0, expected=45.0 -> PASS
